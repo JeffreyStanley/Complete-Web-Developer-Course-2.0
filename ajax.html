@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AJAX</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+    <body>
+        
+        <p></p>
+
+        <script type="text/javascript">
+         
+            $.ajax("inf.txt").done(function(data) {
+                
+                $("p").html(data);
+            })
+                
+                .fail(function () {
+                
+                alert("Could not get data");
+                
+            });
+            
+        </script>
+
+    </body>
+</html>
